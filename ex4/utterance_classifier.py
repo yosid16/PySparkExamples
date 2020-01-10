@@ -17,18 +17,3 @@ class UtteranceClassifier:
 
     def _is_offensive(self, utterance):
         return True if random() < 0.1 else False
-
-
-def main():
-    utterance_classifier = UtteranceClassifier()
-    for i in range(0, 1000):
-        classification = None
-        try:
-            classification = utterance_classifier.classify("utterance")
-        except Exception as ex:
-            classification = ex
-        print("{} classification: {}".format(i, classification))
-
-
-if __name__ == '__main__':
-    main()
